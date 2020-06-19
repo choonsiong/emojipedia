@@ -10,7 +10,7 @@ console.log(publicPath);
 app.use(express.static(publicPath));
 
 app.get('/admin', (req, res) => {
-    res.send('Test...');
+    res.send('This is the administrator page, please...');
 });
 
 app.get('*', (req, res) => {
