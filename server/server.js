@@ -9,6 +9,10 @@ console.log(publicPath);
 
 app.use(express.static(publicPath));
 
+app.get('/admin', (req, res) => {
+    res.send('Test...');
+});
+
 app.get('*', (req, res) => {
     res.sendFile(path.join(publicPath, 'index.html'));
 });
